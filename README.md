@@ -1,2 +1,1 @@
-# wtfhappenedin2005.github.io
-WTF Happened In 2005?
+# [WTF Happened In 2005?](https://wtfhappenedin2005.github.io)
