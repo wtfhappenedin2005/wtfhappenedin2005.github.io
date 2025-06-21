@@ -15,7 +15,7 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* --- Dark Mode (Default) --- */
+        /* --- Dark Mode --- */
         body {
             background-color: #111827; /* gray-900 */
             color: #E5E7EB; /* gray-200 */
@@ -42,8 +42,11 @@
         .toggle-icon {
             fill: #E5E7EB; /* gray-200 */
         }
+        .main-title {
+            color: #F9FAFB; /* gray-50 */
+        }
 
-        /* --- Light Mode Overrides --- */
+        /* --- Light Mode --- */
         body.light-mode {
             background-color: #F9FAFB; /* gray-50 */
             color: #1F2937; /* gray-900 */
@@ -68,7 +71,10 @@
             color: #4B5563; /* gray-600 */
         }
         body.light-mode .toggle-icon {
-            fill: #1F2937; /* gray-900 */
+            fill: #E5E7EB; /* gray-200 */
+        }
+        body.light-mode .main-title {
+            color: #1F2937; /* gray-900 */
         }
     </style>
 </head>
@@ -82,7 +88,7 @@
 
     <div class="max-w-4xl w-full space-y-12">
         <header class="text-center mb-16">
-            <h1 class="text-5xl sm:text-6xl font-bold text-red-500 mb-4 tracking-tight">
+            <h1 class="main-title text-5xl sm:text-6xl font-bold mb-4 tracking-tight">
                 WTF Happened In 2005?
             </h1>
         </header>
@@ -203,10 +209,10 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                setTheme(true);
+            if (savedTheme === 'dark') {
+                setTheme(false); 
             } else {
-                setTheme(false);
+                setTheme(true);
             }
         });
 
